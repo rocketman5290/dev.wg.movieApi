@@ -1,5 +1,4 @@
 package dev.wg.movies;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -13,6 +12,7 @@ public class ReviewService {
     @Autowired
     private MongoTemplate mongoTemplate;
     public Review createReview(String reviewBody, String imdbId) {
+        
         //Ids are auto generated
         Review review = reviewRepository.insert(new Review(reviewBody));
 
